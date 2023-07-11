@@ -8,14 +8,14 @@ def grade_analyzer(student_grades, operation):
         return total / len(student_grades)
     
     elif operation == 'highest':
-        highest = student_grades[1]
+        highest = student_grades[0][1]
         for student in student_grades:
             if student[1] > highest:
                 highest = student[1]
         return highest
     
     elif operation == 'lowest':
-        lowest = student_grades[1]
+        lowest = student_grades[0][1]
         for student in student_grades:
             if student[1] < lowest:
                 lowest = student[1]
