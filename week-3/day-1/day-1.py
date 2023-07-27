@@ -9,7 +9,7 @@ soup = BeautifulSoup(response.content, 'html.parser')
 articles = soup.find_all('div', class_='css-xdandi')
 data = []
 
-for article in articles[:2]:
+for article in articles[:10]:
     title = article.find('h3', class_='indicate-hover').text.strip()
     description_element = article.find('p', class_='summary-class')
     if description_element:
